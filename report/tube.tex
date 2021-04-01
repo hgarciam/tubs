@@ -1,0 +1,129 @@
+\documentclass[handout,11pt,aspectratio=169]{beamer}
+
+\usepackage[latin1]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{slashed}
+\usepackage{multimedia}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+\usepackage{lipsum}
+\usepackage{multimedia}
+\usepackage{psfrag}
+\usepackage{fancybox}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes}
+
+\definecolor{backyellow}{rgb}{1.9,.6,.0}
+
+\definecolor{cernblue}{RGB}{0, 85, 160}
+\setbeamercolor{structure}{fg=cernblue}
+
+
+%\usecolortheme{lily}	
+% \setbeamertemplate{background
+% canvas}{\includegraphics[width=\paperwidth,height=\paperheight]{workshop_poster.ps}}
+% \usefonttheme[mathserif]{serif}
+
+% \usetheme{Warsaw}
+% \usetheme{Darmstadt} %OK!
+% \usetheme{Frankfurt} 	%OK!
+% \usetheme{Goettingen}
+%\usetheme{Dresden}
+% \usetheme{JuanLesPins} %OK!!
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+% \usetheme{Rochester} %sobrio
+%\usetheme{Singapore}
+% \usetheme{Szeged}
+% \usetheme{Copenhagen}
+% \usetheme{Malmoe
+% \usetheme{Marburg}
+% \usetheme{Boadilla}
+
+\newcommand\Wider[2][3em]{%
+\makebox[\linewidth][c]{%
+  \begin{minipage}{\dimexpr\textwidth+#1\relax}
+  \raggedright#2
+  \end{minipage}%
+  }%
+}
+
+\definecolor{cernblue}{RGB}{0, 85, 160}
+\setbeamercolor*{structure}{fg=cernblue}
+
+\beamertemplateshadingbackground{black!0}{black!0}
+
+\definecolor{backyellow}{rgb}{0.98,0.98,0.82}
+\definecolor{backred}{rgb}{0.98,0.92,0.84}	
+
+\vspace{1cm}
+\title[]{\bfseries{Machine learning applied to paper tube resistance}}
+
+\author[Hector Garcia]{\textbf{Hector Garcia-Morales}}
+\institute[RHUL]{$^1$ Royal Holloway University of London, Egham, UK\\
+$^2$ CERN, Geneva, Switzerland\\
+$^3$ University of Manchester, UK}
+\date{\today}
+
+
+\begin{document}
+\expandafter\def\expandafter\insertshorttitle\expandafter{%
+  \insertshorttitle\hfill%
+  \insertframenumber\,/\,\inserttotalframenumber}
+
+\renewcommand{\inserttotalframenumber}{46}
+
+\begin{frame}[plain]
+ \maketitle
+\end{frame}
+
+
+\section{New collimation configuration proposal}
+
+\begin{frame}
+\frametitle{Problem}
+
+\begin{block}{Features}
+\begin{itemize}
+\item Humidity
+\item Internal radius
+\item External radius
+\item Paper quality
+\end{itemize}
+\end{block}
+
+\begin{block}{Objective}
+Predict {\color{cernblue} resistance} value.
+\end{block}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Data samples}
+
+\begin{itemize}
+\item Samples = 12000
+\begin{itemize}
+\item Training examples = 7200 ($60\%$)
+\item Cross validation examples = 2400 ($20\%$)
+\item Test examples = 2400 ($20\%$)
+\end{itemize}
+
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Data inspection}
+
+\begin{itemize}
+\item
+\end{itemize}
+
+
+\end{frame}
+
+\end{document}
