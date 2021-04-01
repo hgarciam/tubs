@@ -24,7 +24,7 @@ class Tubes:
 		self.CLEAN_ZEROS = True
 		self.CLEAN_DATA = True
 		self.PLOT_MATRIX = False
-		self.LOAD_MODEL = True
+		self.LOAD_MODEL = False
 		self.FEATURES = False
 		self.CROSS_VAL = False
 		self.GRID_SCAN = False
