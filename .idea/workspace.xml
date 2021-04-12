@@ -2,57 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fcfd3cb-9360-44e2-ae5b-d0863f6f49df" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/tubs.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RF_model.pickle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/anomalyDetection.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataScatter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_train.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/good_models/estimator_NN.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/good_models/model_lasso.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/good_models/model_ridge.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/load_data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlclass.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model_lasso.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model_ridge.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/octave/checkNNGradients.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/octave/computeNumericalGradient.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/octave/debugInitializeWeights.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/octave/displayData.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/octave/fmincg.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/octave/nnCostFunction.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/octave/plybond.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/octave/plybond.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/octave/predict.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/octave/randInitializeWeights.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/octave/sigmoid.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/octave/sigmoidGradient.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot1_NN.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot1_NN.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot1_RF.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot1_ridge.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot1_ridge.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot2_NN.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot2_NN.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot2_RF.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot2_ridge.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot2_ridge.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot3_NN.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot3_NN.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot3_RF.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot3_ridge.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot3_ridge.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot4_NN.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot4_NN.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot4_RF.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot4_ridge.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot4_ridge.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RF_model.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/RF_model.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tubeclass.py" beforeDir="false" afterPath="$PROJECT_DIR$/tubeclass.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tubs.py" beforeDir="false" afterPath="$PROJECT_DIR$/tubs.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,6 +33,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Documents/DS" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager">
     <configuration name="tubes_RF" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -120,5 +73,17 @@
       <updated>1617044291395</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

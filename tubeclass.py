@@ -22,6 +22,13 @@ class Tubeclass(object):
             self.x4 = self.data_df['Calidad']
             self.y = self.data_df['Resistencia']
 
+            self.mean_x1 = np.mean(self.x1)
+            self.std_x1 = np.std(self.x1)
+            self.mean_x2 = np.mean(self.x2)
+            self.std_x2 = np.std(self.x2)
+
+            print(self.mean_x1, self.std_x1, self.mean_x2, self.std_x2)
+
         else:
             self.ID = self.data_df['IdContramostra']
             self.x1 = self.data_df['Interior']
@@ -33,7 +40,9 @@ class Tubeclass(object):
         print(self.data_df.head())
 
     def inout(self):
+        self.x2 = (self.x2 - self.x1)
         x = np.c_[self.x1, self.x2, self.x3, self.x4]
+
         return x, self.y
 
     def clean_zeros(self):
@@ -52,7 +61,7 @@ class Tubeclass(object):
         for i in range(len(self.x1)):
             if self.x1[i] != 0 and self.x2[i] != 0 and self.x3[i] != 0 and self.x4[i] != 0 and self.y[i] != 0:
                 x1new.append(self.x1[i])
-                x2new.append(self.x2[i] - self.x1[i])
+                x2new.append(self.x2[i])
                 # x2new.append(x2[i])
                 x3new.append(self.x3[i])
                 x4new.append(self.x4[i])
@@ -65,11 +74,11 @@ class Tubeclass(object):
         print('First Clean Dataset length = %i ' % len(x1new))
 
         self.id = idnew
-        self.x1 = scale(x1new)
-        self.x2 = scale(x2new)
-        self.x3 = scale(x3new)
-        self.x4 = scale(x4new)
-        self.y = scale(ynew)
+        self.x1 = x1new
+        self.x2 = x2new
+        self.x3 = x3new
+        self.x4 = x4new
+        self.y = ynew
 
         x = np.c_[self.x1, self.x2, self.x3, self.x4]
 
@@ -85,15 +94,21 @@ class Tubeclass(object):
         x4new = []
         ynew = []
 
+        x1norm = scale(self.x1)
+        x2norm = scale(self.x2)
+        x3norm = scale(self.x3)
+        x4norm = scale(self.x4)
+        ynorm = scale(self.y)
+
         sigmaCutP = 3.0
         sigmaCutN = -3.0
 
         for i in range(len(self.x1)):
-            if (sigmaCutP > self.x1[i] > sigmaCutN
-                    and sigmaCutP > self.x2[i] > sigmaCutN
-                    and sigmaCutP > self.x3[i] > sigmaCutN
-                    and sigmaCutP > self.x4[i] > sigmaCutN
-                    and sigmaCutP > self.y[i] > sigmaCutN
+            if (sigmaCutP > x1norm[i] > sigmaCutN
+                    and sigmaCutP > x2norm[i] > sigmaCutN
+                    and sigmaCutP > x3norm[i] > sigmaCutN
+                    and sigmaCutP > x4norm[i] > sigmaCutN
+                    and sigmaCutP > ynorm[i] > sigmaCutN
             ):
                 x1new.append(self.x1[i])
                 x2new.append(self.x2[i])
@@ -106,11 +121,11 @@ class Tubeclass(object):
                 outliers_id.append(self.id[i])
 
         # Rescale
-        self.x1 = scale(x1new)
-        self.x2 = scale(x2new)
-        self.x3 = scale(x3new)
-        self.x4 = scale(x4new)
-        self.y = scale(ynew)
+        self.x1 = x1new
+        self.x2 = x2new
+        self.x3 = x3new
+        self.x4 = x4new
+        self.y = ynew
 
         x = np.c_[self.x1, self.x2, self.x3, self.x4]
 
@@ -118,3 +133,16 @@ class Tubeclass(object):
         print('A total of %1.2i (%1.2f%%) samples have been removed' % (len(outliers_id), len(outliers_id) / len(self.id) * 100))
 
         return x, self.y
+
+    def classic_estimator(self, pb, x1, x2):
+
+        if pb == 200:
+            estimation = 104.+(136.*x2/2.)-(8.5*(x1/2.))
+        elif pb == 250:
+            estimation = 119.+(154.*x2/2.)-(8.41*(x1/2.))
+        elif pb == 400:
+            estimation = 139.+(178.*x2/2.)-(8.72*(x1/2.))
+        else:
+            estimation = 150.+(190.*x2/2.)-(5.2*(x1/2.))
+
+        return estimation
